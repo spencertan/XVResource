@@ -6,22 +6,28 @@ The library is dependent on XVUtils for the base type (u64,Ptr<T>,etc...) and th
 Hence, you will have to include XVUtils into your project.
 
 To use the resource manager, you can defined the following specialisation:
-> using RM = ResourceManager <Resource1, Resource2, Resource3>;
-> RM manager;
+```c++
+using RM = ResourceManager <Resource1, Resource2, Resource3>;
+RM manager;
+```
 
 This resource manager is able to hold Resource1, Resource2, Resource3.
 The resource manager is implemented through CRTP pattern.
 
 To set-up a loader for a specific resource type:
-> class Resource1Loader : IResourceLoader { // Codes };
-> manager.SetLoader<Resource1>(new Resource1Loader);
+```c++
+class Resource1Loader : IResourceLoader { // Codes };
+manager.SetLoader<Resource1>(new Resource1Loader);
+```
 
 The above binds a resource loader to that specific resource type. 
 Such that all get and load operation through the ResourceManager will access the Resource Loader to load and cache the resource into the manager.
 
 To get resource type:
-> manager.Get<Resource1>(file);
-> manager.Get<Resource1, Resource1Specialisation>(file);
+```c++
+manager.Get<Resource1>(file);
+manager.Get<Resource1, Resource1Specialisation>(file);
+```
 
 The resource manager is able to store and retrieved specialised resource type.
 
