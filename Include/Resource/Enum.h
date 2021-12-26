@@ -1,8 +1,8 @@
 #pragma once
 
-namespace Xivi
+namespace Xivi::Resource
 {
-  enum class ResourceState : u8
+  enum class State : u8
   {
     NotLoaded,
     NotLoadedFallback,
@@ -14,7 +14,7 @@ namespace Xivi
     Final
   };
 
-  enum class ResourceLifetime : u8
+  enum class Policy : u8
   {
     Persistant,
     Referenced,
