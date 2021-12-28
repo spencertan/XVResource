@@ -1,5 +1,5 @@
 #pragma once
-#include "DataWrapper.h"
+#include "Instance.h"
 #include <STL/unordered_map.h>
 
 namespace Xivi::Resource::Details

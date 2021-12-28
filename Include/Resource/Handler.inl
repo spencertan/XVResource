@@ -155,7 +155,7 @@ void Handler<Base, Specialised>::Sync()
 
   m_timestamp = m_cache->m_timestamp;
 
-  const DataWrapper<Base> &wrapper = m_cache->m_datas[m_key];
+  const Resource::Instance<Base> &wrapper = m_cache->m_datas[m_key];
   m_data = wrapper.m_data.get();
   m_state = wrapper.m_state;
 
