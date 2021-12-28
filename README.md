@@ -7,7 +7,7 @@ Hence, you will have to include XVUtils into your project.
 
 To use the resource manager, you can defined the following specialisation:
 ```c++
-using RM = ResourceManager <Resource1, Resource2, Resource3>;
+using RM = Resource::Manager <Resource1, Resource2, Resource3>;
 RM manager;
 ```
 
@@ -16,7 +16,7 @@ The resource manager is implemented through CRTP pattern.
 
 To set-up a loader for a specific resource type:
 ```c++
-class Resource1Loader : IResourceLoader { // Codes };
+class Resource1Loader : Resource::ILoader { // Codes };
 manager.SetLoader<Resource1>(new Resource1Loader);
 ```
 
