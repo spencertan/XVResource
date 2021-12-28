@@ -29,7 +29,7 @@ class Cache
   void IncreaseReference( Resource::ID key );
   void DecreaseReference( Resource::ID key );
 
-  unordered_map<Resource::ID, DataWrapper<Base>> m_datas;
+  unordered_map<Resource::ID, Resource::Instance<Base>> m_datas;
   UniquePtr<Base> m_fallback { nullptr };
   UniquePtr<ILoader<Base>> m_loader { nullptr };
   u64 m_timestamp { 0 };
