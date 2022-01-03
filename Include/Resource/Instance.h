@@ -30,7 +30,7 @@ struct Instance
 
   ~Instance()
   {
-    XV_CORE_ASSERT_MSG( m_count == 0, "[Data] Existing reference exists" );
+    XV_CORE_ASSERT_MSG( m_reference_count == 0, "[Data] Existing reference exists" );
   }
 };
 } // namespace Xivi
