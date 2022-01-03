@@ -1,0 +1,3 @@
+[submodule "Dep/XVUtils"]
+	path = Dep/XVUtils
+	url = https://github.com/spencertan/XVUtils.git
